@@ -1,21 +1,65 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/npm-debug.log*
-/yarn-error.log
-/yarn.lock
-/package-lock.json
-
-# production
-/dist
-/docs-dist
-
-# misc
+*.iml
+.idea/
+.ipr
+.iws
+*~
+~*
+*.diff
+*.patch
+*.bak
 .DS_Store
+Thumbs.db
+.project
+.*proj
+.svn/
+*.swp
+*.swo
+*.log
+*.log.*
+*.json.gzip
+node_modules/
+.buildpath
+.settings
+npm-debug.log
+nohup.out
+_site
+_data
+dist
+report.html
+/lib
+/es
+/locale
+elasticsearch-*
+config/base.yaml
+/.vscode/
+/coverage
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+.pnpm-debug.log
+components/**/*.js
+components/**/*.jsx
+!components/**/__tests__/**/*.js
+!components/**/__tests__/**/*.js.snap
+/.history
+*.tmp
+server/
 
-# umi
-.umi
-.umi-production
-.umi-test
-.env.local
+# Docs templates
+scripts/previewEditor/index.html
+components/version/version.tsx
+components/version/token.json
+components/version/token-meta.json
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
+src/.umi/*
+
+# Image snapshot diff
+__diff_output__/
+__image_snapshots__/
+/jest-stare
+/imageSnapshots
+/imageDiffSnapshots
+
+.devcontainer*

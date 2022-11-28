@@ -1,29 +1,45 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "jsx": "react",
+    "target": "es6",
+    "module": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es2021"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "sourceMap": true,
-    "baseUrl": "./",
-    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node", //node环境
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "experimentalDecorators": true,
     "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
-    },
-    "allowSyntheticDefaultImports": true
+      "@@/*": [
+        ".dumi/tmp/*"
+      ],
+      "Lordaeron": [
+        "src"
+      ],
+      "Lordaeron/*": [
+        "src/*",
+        "*"
+      ]
+    }
   },
+  "include": [
+    "typings.d.ts", //配置的.d.ts文件
+    "docs/guide"
+  ],
   "exclude": [
     "node_modules",
-    "lib",
-    "es",
-    "dist",
-    "typings",
-    "**/__test__",
-    "test",
-    "tests",
-    "docs"
+    "lib"
   ]
 }
