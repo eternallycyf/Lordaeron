@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkLordaeron=self.webpackChunkLordaeron||[]).push([[570],{43766:function(a,r,n){n.r(r);var t=n(79685),e=n(63342),u=function(){return(0,e.jsx)(e.Fragment,{children:"hello"})};r.default=u}}]);
