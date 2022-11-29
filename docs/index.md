@@ -19,4 +19,4 @@ features:
     description: Put ! description here
 ---
 
-s
+<code src="./index.tsx"></code>
