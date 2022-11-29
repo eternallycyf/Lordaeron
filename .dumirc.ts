@@ -2,13 +2,17 @@ import { defineConfig } from 'dumi';
 import style from './docs/siteIndexStyle';
 import path from 'path';
 
+const repo = 'Lordaeron';
+
 export default defineConfig({
   // favicons: [''],
+  base: process.env.APP_ENV === 'development' ? '/' : `/${repo}`,
+  publicPath: process.env.APP_ENV === 'development' ? '/' : `/${repo}/`,
   outputPath: 'docs-dist',
   history: {
     type: 'hash',
   },
-  // hash: true,
+  hash: true,
   resolve: {
     docDirs: ['docs'],
     atomDirs: [

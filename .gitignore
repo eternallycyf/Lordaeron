@@ -24,7 +24,9 @@ npm-debug.log
 nohup.out
 _site
 _data
-dist
+/dist
+/docs-dist
+docs-list
 report.html
 /lib
 /es
