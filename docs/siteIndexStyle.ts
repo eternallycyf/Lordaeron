@@ -78,6 +78,7 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
   padding-left: 66px !important;
 }
 .dumi-default-hero {
+  user-select: none;
   margin: -96px auto -300px auto !important;
 }
 .dumi-default-hero >.dumi-default-hero-title {

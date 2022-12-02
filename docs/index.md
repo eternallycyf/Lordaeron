@@ -12,7 +12,7 @@ hero:
 
 <code src="./components/home-page.tsx" inline="true"></code>
 
-<code src="./components/Loading.tsx" inline="true"></code>
+<code src="./components/Loading.tsx" ></code>
 
 ```tsx | demo
 /**

@@ -3,9 +3,8 @@ import { useEffect } from 'react';
 import React from "react";
 const Page = () => {
   useEffect(() => {
-    const spinner = document.querySelector('.js-spinner');
+    const spinner = document.querySelector('.js-spinner') as HTMLDivElement;
     const spinnerClass = spinner.getAttribute('class');
-    console.log(spinner)
     setTimeout(function () {
       if (spinnerClass) {
         spinner.setAttribute(
@@ -16,10 +15,13 @@ const Page = () => {
         spinner.setAttribute('class', `state-show state-away`);
       }
     }, 1500);
+    // spinner.style.display = 'none';
     setTimeout(function () {
       spinner.remove();
+      window.localStorage.setItem('loading', 'false');
     }, 3000);
   }, []);
+
   return (
     <div className="state-spinner-fixed">
       <div className="page_wrapper js-wrapper">
