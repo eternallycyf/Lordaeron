@@ -21,6 +21,9 @@ const style = `
     #4038a8        
   )
 }
+#root p{
+  font-family: "dm", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
 html[data-prefers-color="dark"] .__dumi-default-layout-hero h1, html[data-prefers-color="light"] .__dumi-default-layout-hero h1 {
   color: #f3f3f3;
   text-shadow: 0 4px 15px rgb(0 0 0 / 30%);
@@ -76,6 +79,23 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
 }
 .dumi-default-hero {
   margin: -96px auto -300px auto !important;
+}
+.dumi-default-hero >.dumi-default-hero-title {
+  animation: shake 1s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.dumi-default-hero >.dumi-default-hero-title > span{
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+}
+@keyframes shake {
+0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .dumi-default-sidebar > dl > dd {
   padding: 20px 0 !important;
