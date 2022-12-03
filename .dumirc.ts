@@ -39,7 +39,7 @@ export default defineConfig({
     carrier: 'dumi',
     hd: true,
     logo:
-      process.env.APP_ENV === 'development'
+      process.env.NODE_ENV === 'development'
         ? '/images/origin.png'
         : `/${repo}/images/origin.png`,
     footer: 'lordaeron © 2020 Created by lordaeron',
@@ -62,7 +62,7 @@ export default defineConfig({
     runtimePublicPath: true,
   },
   favicons: [
-    process.env.APP_ENV === 'development'
+    process.env.NODE_ENV === 'development'
       ? '/images/favicon.ico'
       : `/${repo}/images/favicon.ico`,
   ],
