@@ -38,7 +38,10 @@ export default defineConfig({
     name: 'lordaeron',
     carrier: 'dumi',
     hd: true,
-    // logo: '',
+    logo:
+      process.env.APP_ENV === 'development'
+        ? '/images/origin.png'
+        : `/${repo}/images/origin.png`,
     footer: 'lordaeron © 2020 Created by lordaeron',
     nav: [
       {
@@ -58,7 +61,11 @@ export default defineConfig({
   mfsu: {
     runtimePublicPath: true,
   },
-  // favicons: [''],
+  favicons: [
+    process.env.APP_ENV === 'development'
+      ? '/images/favicon.ico'
+      : `/${repo}/images/favicon.ico`,
+  ],
   styles: [style],
   theme: { '@primary-color': '#1DA57A' },
   clickToComponent: {},
