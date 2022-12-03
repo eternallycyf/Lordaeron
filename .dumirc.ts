@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 import style from './docs/siteIndexStyle';
 import path from 'path';
 
-const repo = 'Lordaeron';
+const repo = 'lordaeron';
 const basePath = `/${repo}/`;
 
 const content = `(function(){
@@ -20,26 +20,26 @@ export default defineConfig({
   resolve: {
     docDirs: ['docs'],
     atomDirs: [
-      { type: 'component', dir: './packages/Lordaeron-react/src' },
-      { type: 'mobile', dir: './packages/Lordaeron-react-mobile/src' },
+      { type: 'component', dir: './packages/lordaeron-react/src' },
+      { type: 'mobile', dir: './packages/lordaeron-react-mobile/src' },
     ],
     codeBlockMode: 'passive',
   },
   alias: {
     packages: path.join(__dirname, 'packages'),
-    Lordaeron: path.join(__dirname, 'packages/Lordaeron-react/src'),
-    'Lordaeron-react-mobile': path.join(__dirname, 'packages/Lordaeron-react-mobile/src'),
+    lordaeron: path.join(__dirname, 'packages/lordaeron-react/src'),
+    'lordaeron-react-mobile': path.join(__dirname, 'packages/lordaeron-react-mobile/src'),
   },
   locales: [
     { id: 'en-US', name: 'English', suffix: '' },
     { id: 'zh-CN', name: '中文', suffix: 'zh-CN' },
   ],
   themeConfig: {
-    name: 'Lordaeron',
+    name: 'lordaeron',
     carrier: 'dumi',
     hd: true,
     // logo: '',
-    footer: 'Lordaeron © 2020 Created by Lordaeron',
+    footer: 'lordaeron © 2020 Created by lordaeron',
     nav: [
       {
         title: '指南',
@@ -51,7 +51,7 @@ export default defineConfig({
       },
       {
         title: 'GitHub',
-        link: 'https://github.com/eternallycyf/Lordaeron',
+        link: 'https://github.com/eternallycyf/lordaeron',
       },
     ],
   },

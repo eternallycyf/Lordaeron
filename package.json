@@ -1,16 +1,16 @@
 {
   "private": true,
-  "name": "Lordaeron",
+  "name": "lordaeron",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
+    "test:pkg": "jest ./tests -u",
     "deploy": "npm run docs:build && npm run docs:deploy",
-    "release": "npm run build && npm publish",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "eslint": "eslint docs/ packages/concis-react/src --cache --fix --quiet --ext .js,.jsx,.ts,.tsx",
+    "stylelint": "stylelint {packages,docs}/**/*.less --fix",
+    "prettier": "prettier --config .prettierrc.js --write \"{packages,docs}/**/*.{js,jsx,ts,tsx}\""
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -24,9 +24,6 @@
     "branch": "main"
   },
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
     "*.ts?(x)": [
       "prettier --parser=typescript --write"
     ]

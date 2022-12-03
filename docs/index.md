@@ -1,18 +1,18 @@
 ---
-title: Lordaeron - 轻量级组件库
+title: lordaeron - 轻量级组件库
 hero:
-  title: Lordaeron
+  title: lordaeron
   description: A high-performance, lightweight UI library for quickly building React applications
   actions:
     - text: Start
-      link: /guide/introducezh-CN
+      link: /guide
     - text: Components
-      link: /components/buttonzh-CN
+      link: /components/button
 ---
 
 <code src="./components/home-page.tsx" inline="true"></code>
 
-<code src="./components/Loading.tsx" ></code>
+<code src="./components/Loading.tsx" inline="true"></code>
 
 ```tsx | demo
 /**
@@ -23,7 +23,7 @@ import { Section } from './site/Section';
 import './site/styles.less';
 export default () => (
   <Section
-    title="Experience the ultimate in Lordaeron online"
+    title="Experience the ultimate in lordaeron online"
     style={{ marginTop: 40 }}
     titleStyle={{ paddingBottom: 100, fontWeight: 'bold', fontSize: 50, textAlign: 'center' }}
   >

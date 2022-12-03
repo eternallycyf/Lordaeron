@@ -9,6 +9,4 @@ declare module '*.module.less' {
 }
 declare module 'lodash';
 declare module 'enzyme-adapter-react-16';
-
-
 declare module 'aria-query"'

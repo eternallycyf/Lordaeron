@@ -30,8 +30,8 @@
       "@/packages": [
         "./packages"
       ],
-      "Lordaeron": [
-        "packages/Lordaeron-react/src"
+      "lordaeron": [
+        "packages/lordaeron-react/src"
       ]
     },
   },

@@ -8,6 +8,6 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^Lordaeron$': '<rootDir>/src/index.ts',
+    '^lordaeron$': '<rootDir>/src/index.ts',
   },
 };

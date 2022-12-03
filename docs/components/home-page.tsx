@@ -37,7 +37,7 @@ export default () => {
         {
           img: 'https://gw.alipayobjects.com/zos/bmw-prod/3863e74a-7870-4874-b1e1-00a8cdf47684/kj9t7ww3_w144_h144.png',
           title: '移动端组件支持',
-          txt: 'Lordaeron额外支持移动端组件，提供pc/mobile双端支持',
+          txt: 'lordaeron额外支持移动端组件，提供pc/mobile双端支持',
         },
       ];
     }
@@ -70,7 +70,7 @@ export default () => {
       {
         img: 'https://gw.alipayobjects.com/zos/bmw-prod/3863e74a-7870-4874-b1e1-00a8cdf47684/kj9t7ww3_w144_h144.png',
         title: 'Mobile component support',
-        txt: 'Lordaeron additionally supports mobile components and provides pc/mobile dual-end support',
+        txt: 'lordaeron additionally supports mobile components and provides pc/mobile dual-end support',
       },
     ];
   }, [id]);
