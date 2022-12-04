@@ -1,5 +1,7 @@
 // 更新lordaeron-react/package.json中的版本
+// @ts-ignore
 const fs = require('fs-extra');
+// @ts-ignore
 const path = require('path');
 const { version } = require('../packages/lordaeron-react/package.json');
 
