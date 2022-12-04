@@ -1,0 +1,15 @@
+stages:
+  - build
+  - public
+
+test_deploy:
+  when: manual
+  only:
+    - develop
+  stage: build
+  variables:
+    PORT: "80"
+  tags:
+    - k8spackage
+  script:
+

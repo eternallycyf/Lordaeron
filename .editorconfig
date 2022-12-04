@@ -1,11 +1,37 @@
-# 🎨 editorconfig.org
-
+# 告诉EditorConfig插件，这是根文件，不用继续往上查找
 root = true
 
+# 匹配全部文件
 [*]
-charset = utf-8
+# 结尾换行符，可选"lf"、"cr"、"crlf"
 end_of_line = lf
+# 在文件结尾插入新行
+insert_final_newline = true
+# 删除一行中的前后空格
+trim_trailing_whitespace = true
+# 匹配js和py结尾的文件
+[*.{js,py}]
+# 设置字符集
+charset = utf-8
+
+# 匹配py结尾的文件
+[*.py]
+# 缩进风格，可选"space"、"tab"
+indent_style = space
+# 缩进的空格数
+indent_size = 4
+
+# 以下匹配，类同
+[Makefile]
+indent_style = tab
+# tab的宽度
+tab_width = 4
+
+# 以下匹配，类同
+[lib/**.js]
 indent_style = space
 indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
