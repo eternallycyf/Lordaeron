@@ -20,7 +20,7 @@ export default defineConfig({
   resolve: {
     docDirs: ['docs'],
     atomDirs: [
-      { type: 'component', dir: './packages/lordaeron-react/src' },
+      { type: 'component', dir: './packages/lordaeron-react/src/components' },
       { type: 'mobile', dir: './packages/lordaeron-react-mobile/src' },
     ],
     codeBlockMode: 'passive',
@@ -46,7 +46,7 @@ export default defineConfig({
     nav: [
       {
         title: '指南',
-        link: '/guide/introduce',
+        link: '/guide',
       },
       {
         title: '组件',

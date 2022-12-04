@@ -1,1 +1,20 @@
-This is a guide example.
+## 项目主要使用的技术栈 
+- React18+typescript
+  - https://beta.reactjs.org/
+  - https://www.typescriptlang.org/
+  - https://github.com/typescript-cheatsheets/react
+- JSS
+  - https://cssinjs.org/jss-plugin-compose?v=v10.9.2
+  - https://github.com/cssinjs/jss/blob/master/docs/react-jss-ts.md
+- ts-node
+  - 自动注入脚本
+  - 自动发布脚本
+- hooks
+  - [ahooks](https://ahooks.js.org/zh-CN/guide/)
+- utils
+  - lodash
+- 单元测试
+  - jest
+  - ts-jest
+- 动画
+- ...
