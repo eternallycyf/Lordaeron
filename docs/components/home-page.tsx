@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { useLocale } from 'dumi';
 import './home-page.less';
+import { version } from '../../packages/lordaeron-react/package.json';
 
 export default () => {
   const { id } = useLocale();
@@ -77,6 +78,7 @@ export default () => {
   return (
     <div className="homePage">
       {/* 内容部分 */}
+      <span className="version">v{version}</span>
       <div className="main">
         {/* 功能特性 */}
         <div className="group">

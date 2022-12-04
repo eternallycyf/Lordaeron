@@ -5,18 +5,31 @@
     text-decoration: none;
   }
 
+  .version {
+    position: absolute;
+    top: -11.5%;
+    right: 13.5%;
+    margin-left: 6px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: #3978ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
   .main {
-    margin: 0 auto;
-    max-width: 1200px;
-    min-width: 960px;
-    padding: 0 48px;
     box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 48px;
+    min-width: 960px;
+    max-width: 1200px;
 
     .header {
       display: flex;
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
       padding-top: 50px;
 
       .headerLeft {
@@ -32,11 +45,11 @@
         }
 
         .title {
-          font-size: 84px;
-          font-weight: 700;
-          color: rgba(0, 0, 0, 90%);
-          line-height: 1;
           margin: 0;
+          color: rgba(0, 0, 0, 90%);
+          font-weight: 700;
+          font-size: 84px;
+          line-height: 1;
 
           [data-prefers-color='dark'] & {
             color: unset;
@@ -44,25 +57,13 @@
         }
 
         .description {
-          font-size: 20px;
-          color: rgba(0, 0, 0, 85%);
-          line-height: 28px;
           margin-bottom: 56px;
+          color: rgba(0, 0, 0, 85%);
+          font-size: 20px;
+          line-height: 28px;
 
           [data-prefers-color='dark'] & {
             color: unset;
-          }
-
-          .version {
-            font-size: 14px;
-            font-weight: 700;
-            padding: 4px 8px;
-            margin-left: 6px;
-            background: #3978ff;
-            color: #fff;
-            border-radius: 10px;
-            position: relative;
-            bottom: 2px;
           }
         }
 
@@ -71,13 +72,13 @@
 
           a {
             display: inline-block;
-            font-size: 16px;
+            margin-right: 14px;
             padding: 8px 20px;
-            border-radius: 100px;
             border: 1px solid #3978ff;
+            border-radius: 100px;
             background-color: #fff;
             color: #3978ff;
-            margin-right: 14px;
+            font-size: 16px;
             transition: 0.2s linear;
 
             &:hover {
@@ -93,9 +94,9 @@
       }
 
       .headerRight {
+        position: relative;
         display: flex;
         align-items: center;
-        position: relative;
 
         .plus {
           font-size: 40px;
@@ -105,30 +106,32 @@
           position: absolute;
           top: 0;
           left: 0;
-          background: linear-gradient(-45deg, #1890ff 50%, #866bf0 50%);
+          z-index: -1;
           width: 350px;
           height: 350px;
-          filter: blur(45px);
           border-radius: 50%;
-          z-index: -1;
+          background: linear-gradient(-45deg, #1890ff 50%, #866bf0 50%);
+          filter: blur(45px);
           animation: iconActivity 6s infinite linear;
         }
 
         .headerImage {
-          width: 350px;
           z-index: 0;
+          width: 350px;
 
           &:last-of-type {
             margin-left: 30px;
           }
+
           @media (max-width: 1300px) {
             & {
+              margin-left: -30%;
               width: 420px;
               transform: translateX(30%);
-              margin-left: -30%;
             }
           }
         }
+
         @keyframes iconActivity {
           0% {
             top: -20px;
@@ -154,23 +157,23 @@
     }
 
     .group {
-      padding: 32px 0 24px;
       margin: 80px 0 90px;
+      padding: 32px 0 24px;
     }
 
     .groupTitle {
-      font-size: 24px;
-      color: #697a8c;
-      line-height: 32px;
+      display: flex;
       margin-top: 12px;
       margin-bottom: 48px;
-      display: flex;
+      color: #697a8c;
+      font-size: 24px;
+      line-height: 32px;
 
       div {
         flex: 1 1;
-        border-top: 1px solid #ebf0f4;
-        height: 1px;
         margin-top: 18px;
+        height: 1px;
+        border-top: 1px solid #ebf0f4;
       }
 
       span {
@@ -184,14 +187,14 @@
 
     ul.features {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 30px;
-      flex-wrap: wrap;
 
       li {
-        list-style: none;
-        width: 33.3%;
         margin: 20px 0;
+        width: 33.3%;
+        list-style: none;
 
         p:nth-child(1) {
           margin: 0 auto;
@@ -199,14 +202,14 @@
         }
 
         p:nth-child(2) {
-          height: 24px;
-          width: 100%;
-          font-size: 16px;
-          color: rgba(0, 0, 0, 85%);
-          line-height: 24px;
           margin-top: 30px;
           margin-bottom: 8px;
+          width: 100%;
+          height: 24px;
+          color: rgba(0, 0, 0, 85%);
           text-align: center;
+          font-size: 16px;
+          line-height: 24px;
 
           [data-prefers-color='dark'] & {
             color: unset;
@@ -214,13 +217,13 @@
         }
 
         p:nth-child(3) {
-          width: 210px;
           margin: 0 auto;
-          font-size: 16px;
+          margin-top: 8px;
+          width: 210px;
           color: #697a8c;
           text-align: center;
+          font-size: 16px;
           line-height: 24px;
-          margin-top: 8px;
         }
       }
     }
@@ -228,13 +231,15 @@
 }
 
 html[data-prefers-color='dark'] {
+
   .homePage .main .header .headerLeft .buttons .componentBtn,
   .homePage .main .header .headerLeft .buttons .githubBtn {
-    background-color: #3a3a3a;
     border: 1px solid #484848;
+    background-color: #3a3a3a;
     color: #fff;
   }
 }
+
 @media screen and (max-width: 769px) {
   .homePage {
     .main {
@@ -256,17 +261,17 @@ html[data-prefers-color='dark'] {
         padding: 0;
 
         ul.features {
+          position: relative;
+          right: 20px;
           display: flex;
           flex-wrap: wrap;
           width: 100vw;
-          position: relative;
-          right: 20px;
 
           li {
-            width: 100%;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            flex-direction: column;
+            width: 100%;
           }
         }
       }

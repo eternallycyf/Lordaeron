@@ -114,7 +114,10 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
   font-size: 14px !important;
 }
 .dumi-default-logo img {
-  height: 60px !important;
+  height: 32px ;
+}
+.features{
+  padding: 0;
 }
 `;
 
