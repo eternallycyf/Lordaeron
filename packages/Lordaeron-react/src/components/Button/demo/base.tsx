@@ -1,23 +1,23 @@
 import { Button } from "lordaeron";
 import React from "react";
 
-const Demo = () => {
+const Base = () => {
   return (
     <>
-      <Button type="primary" disabled={false}>
+      <Button type="primary" >
         primary button
       </Button>
-      <Button type="default" disabled={false}>
+      <Button type="default" >
         default button
       </Button>
-      <Button type="danger" disabled={false}>
+      <Button type="danger" >
         danger button
       </Button>
-      <Button type="link" disabled={false}>
+      <Button type="link" >
         link button
       </Button>
     </>
   )
 }
 
-export default Demo;
+export default Base;

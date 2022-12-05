@@ -1,4 +1,5 @@
 import Color from 'color';
+import { ColorParam } from '../types/global'
 
 export const $gray100 = '#f8f9fa';
 export const $gray200 = '#e9ecef';
@@ -22,9 +23,9 @@ export const $green = '#52c41a';
 export const $teal = '#20c997';
 export const $cyan = '#17a2b8';
 export const $tomato = '#ff4d4f';
-export const $white = '#fff';
+export const $white = '#FFFFFF' as ColorParam;
 
-export const $primary = $blue;
+export const $primary = $blue as ColorParam;
 export const $secondary = $gray600;
 export const $success = $green;
 export const $info = $cyan;
@@ -129,11 +130,12 @@ export const $btn_border_width = $border_width;
 // 按钮其他
 export const $btn_box_shadow = 'inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075)';
 export const $btn_disabled_opacity = 0.65;
+export const $btn_disabled_background_color = Color($gray600).lighten(0.9).hex();
+export const $btn_disabled_color = Color($gray600).lighten(0.3).hex();
 
 // 链接按钮
 export const $btn_link_color = $link_color;
 export const $btn_link_hover_color = $link_hover_color;
-export const $btn_link_disabled_color = $gray600;
 
 // 按钮 radius
 export const $btn_border_radius = $border_radius;

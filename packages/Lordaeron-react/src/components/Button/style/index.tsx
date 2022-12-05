@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import * as variables from '../../../styles/variables';
-import * as mixins from '../../../styles/mixin';
+import * as mixins from './mixin';
+import Color from 'color';
 import { ButtonProps, CustomTheme, RuleNames } from "../interface";
 
 const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>({
@@ -58,13 +59,12 @@ const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>({
       boxShadow: 'none',
     },
     '&:disabled, &.disabled': {
-      color: variables.$btn_link_disabled_color,
-      pointerEvents: 'none',
+      color: variables.$btn_disabled_color,
     },
   },
   disabled: {
-    color: variables.$btn_link_disabled_color,
-    pointerEvents: 'none',
+    color: variables.$btn_disabled_color,
+    cursor: 'not-allowed',
   }
 })
 

@@ -29,6 +29,7 @@
       "@/packages": [
         "./packages"
       ],
+      "dumi/theme":"./dumi/theme",
       "lordaeron": [
         "packages/lordaeron-react/src"
       ]

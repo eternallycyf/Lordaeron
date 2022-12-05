@@ -1,5 +1,5 @@
 import Color from 'color';
-
+import * as variables from '../../../styles/variables';
 export const buttonSize = ($padding_y, $padding_x, $font_size, $border_radius) => {
   return {
     padding: $padding_y + ' ' + $padding_x,
@@ -31,9 +31,9 @@ export const buttonStyle = (
       borderColor: $hover_border,
     },
     '&:disabled, &.disabled': {
-      color: $color,
-      background: $background,
-      borderColor: $border,
+      borderColor: variables.$border_color,
+      color: variables.$btn_disabled_color,
+      backgroundColor: variables.$btn_disabled_background_color
     },
   };
 }

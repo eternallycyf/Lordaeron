@@ -21,9 +21,6 @@ const style = `
     #4038a8        
   )
 }
-#root p{
-  font-family: "dm", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
 html[data-prefers-color="dark"] .__dumi-default-layout-hero h1, html[data-prefers-color="light"] .__dumi-default-layout-hero h1 {
   color: #f3f3f3;
   text-shadow: 0 4px 15px rgb(0 0 0 / 30%);

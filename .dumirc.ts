@@ -67,7 +67,7 @@ export default defineConfig({
       : `/${repo}/images/favicon.ico`,
   ],
   styles: [style],
-  theme: { '@primary-color': '#1DA57A' },
+  theme: { '@primary-color': '#1DA57A','@hd': '0.02rem' },
   clickToComponent: {},
   targets: { chrome: 79 },
   codeSplitting: { jsStrategy: 'granularChunks' },

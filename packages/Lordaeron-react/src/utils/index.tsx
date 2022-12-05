@@ -1,3 +1,5 @@
+import Color from 'color';
+
 /**
   * 数字千分位展示并显示n位小数
   * @param {(number | string)} 需要格式化的值
