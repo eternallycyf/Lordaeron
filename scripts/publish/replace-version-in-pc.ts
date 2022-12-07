@@ -50,18 +50,19 @@ execShell();
 //执行整个流程的命令
 async function execShell() {
   console.log(newVersion.join('.'))
-  const echo1 = `${green('[ 1 / 2 ]')} ${cyan(`Tag and push tag to main`)}`;
-  const part1 = [`git tag version-${String(newVersion.join('.'))}`, `git push origin refs/tags/version-${String(newVersion.join('.'))} --verbose`];
-  const echo2 = `${green('[ 2 / 2 ]')} ${cyan('Publish to npm')}`;
-  await step(echo1, part1);
-  await step(echo2);
+  const echo1 = `${green('[ 2 / 2 ]')} ${cyan('build ')}`;
+  const echo2 = `${green('[ 1 / 2 ]')} ${cyan(`Tag and push tag to main`)}`;
+  const part2 = [`git tag version-${String(newVersion.join('.'))}`, `git push origin refs/tags/version-${String(newVersion.join('.'))}`];
+  await step(echo1, ['cd ./packages/lordaeron-react', 'pwd', 'yarn rollup -c ./rollup.config.js --bundleConfigAsCjs']);
+  await step(echo2, part2);
 }
 
 async function step(desc, command) {
   // console.log(desc)
   return new Promise((resolve, reject) => {
+    console.log(green(command));
     const childExec = exec(
-      command,
+      command.join(' && '),
       { maxBuffer: 10000 * 10240 },
       (err, stdout, stderr) => {
         console.log(err, stdout, stderr);

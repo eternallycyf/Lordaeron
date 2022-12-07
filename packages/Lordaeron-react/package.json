@@ -1,7 +1,7 @@
 {
   "name": "lordaeron",
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.0.0",
   "type": "module",
   "description": "lordaeron Component library for PC",
   "module": "./web-react/es/index.js",

@@ -13,7 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node16", //node环境
+    "moduleResolution": "Node", //node环境
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,

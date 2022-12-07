@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "auto-import-init": "ts-node scripts/auto-import.ts",
-    "upgrade:component": "ts-node scripts/publish/replace-version-in-pc.ts && cd ./packages/lordaeron-react && npm publish --access=public",
+    "upgrade:component": "ts-node scripts/publish/replace-version-in-pc.ts && npm publish --access=public",
     "start": "npm run auto-import-init && dumi dev",
     "docs:build": "npm run auto-import-init && dumi build",
     "docs:deploy": "npm run auto-import-init && gh-pages -d docs-dist",
