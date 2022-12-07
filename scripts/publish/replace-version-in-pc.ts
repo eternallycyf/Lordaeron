@@ -53,14 +53,14 @@ async function execShell() {
   const echo1 = `${green('[ 2 / 2 ]')} ${cyan('build ')}`;
   const echo2 = `${green('[ 1 / 2 ]')} ${cyan(`Tag and push tag to main`)}`;
   const part2 = [`git tag version-${String(newVersion.join('.'))}`, `git push origin refs/tags/version-${String(newVersion.join('.'))}`];
-  await step(echo1, ['cd ./packages/lordaeron-react', 'pwd', 'yarn rollup -c ./rollup.config.js --bundleConfigAsCjs']);
+  await step(echo1, ['cd ./packages/lordaeron-react', 'yrm use yarn', 'yarn rollup -c ./rollup.config.js --bundleConfigAsCjs']);
   await step(echo2, part2);
 }
 
 async function step(desc, command) {
   // console.log(desc)
   return new Promise((resolve, reject) => {
-    console.log(green(command));
+    console.log(command.join(' && '));
     const childExec = exec(
       command.join(' && '),
       { maxBuffer: 10000 * 10240 },
