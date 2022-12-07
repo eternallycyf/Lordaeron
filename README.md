@@ -1,11 +1,11 @@
 <div align="center">
   <a href="https://wangxince.site/Lordaeron" target="_blank">
-   loraaeron
+   lordaeron
   </a>
 </div>
 
 <div align="center">
-  <h1>loraaeron</h1>
+  <h1>lordaeron</h1>
 </div>
 
 <div align="center">
@@ -43,14 +43,14 @@ All components are written in TypeScript so it's type friendly.
 
 # Installation
 
-Available as an [npm package](https://www.npmjs.com/package/loraaeron)
+Available as an [npm package](https://www.npmjs.com/package/lordaeron)
 
 ```bash
 // with npm
-npm install loraaeron@latest
+npm install lordaeron@latest
 
 // with yarn
-yarn add loraaeron@latest
+yarn add lordaeron@latest
 ```
 
 # Examples
@@ -58,10 +58,10 @@ yarn add loraaeron@latest
 ```typescript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'concis';
+import { Button } from 'lordaeron';
 
 function App() {
-  return <Button type="primary">Hello loraaeron!</Button>;
+  return <Button type="primary">Hello lordaeron!</Button>;
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
@@ -69,7 +69,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 # Local experience
 
-In the examples folder, there is a `vite` + `react` project runtime environment, in which you can experience the `concis` component, run the command in the project root directory:
+In the examples folder, there is a `vite` + `react` project runtime environment, in which you can experience the `lordaeron` component, run the command in the project root directory:
 
 ```tsx pure
 pnpm examples:dev

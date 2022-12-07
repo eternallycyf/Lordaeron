@@ -1,9 +1,7 @@
 /**
  * @author:
  */
-// @ts-ignore
 const fs = require("fs");
-// @ts-ignore
 const path = require("path");
 const chalk = require("chalk");
 const ejs = require("ejs");
@@ -48,3 +46,5 @@ fs.writeFile(targetFile, result, (err: NodeJS.ErrnoException) => {
     console.log(chalk.green(`配置插件完成: ${targetFile}\n`));
   }
 });
+
+export { };

@@ -1,7 +1,7 @@
 {
   "name": "lordaeron",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "type": "module",
   "description": "lordaeron Component library for PC",
   "module": "./web-react/es/index.js",
@@ -29,14 +29,8 @@
   ],
   "scripts": {
     "build": "rollup -c ./rollup.config.js --bundleConfigAsCjs",
-    "replase:patch": "npm run build && cimi patch main",
-    "replase:minor": "npm run build && cimi minor main",
-    "replase:major": "npm run build && cimi major main",
-    "replase:beta": "npm run build && cimi beta main",
-    "replase:upgrade": "npm run build && cimi upgradeBeta main",
     "test:unit": "jest ./src/*/__test__/*.test.tsx --silent=false -u",
-    "test:demo": "jest ./src/*/__test__/demo.test.ts --silent=false -u",
-    "upgrade": "node ../../scripts/replace-version-in-pc.ts"
+    "test:demo": "jest ./src/*/__test__/demo.test.ts --silent=false -u"
   },
   "files": [
     "web-react",
@@ -48,7 +42,6 @@
     "@babel/plugin-transform-runtime": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
     "ahooks": "^3.7.2",
-    "cimi": "1.2.0",
     "color": "^4.2.3",
     "core-js": "^3.24.1",
     "dayjs": "^1.11.4",
