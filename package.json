@@ -6,6 +6,7 @@
     "auto-import-init": "ts-node scripts/auto-import.ts",
     "upgrade:component": "ts-node scripts/publish/replace-version-in-pc.ts && cd ./packages/lordaeron-react  && yarn publish --access=public",
     "start": "npm run auto-import-init && dumi dev",
+    "build": "dumi build",
     "docs:build": "npm run auto-import-init && dumi build",
     "docs:deploy": "npm run auto-import-init && gh-pages -d docs-dist",
     "test:pkg": "jest ./tests -u",
