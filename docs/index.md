@@ -29,7 +29,7 @@ export default () => (
   >
       <iframe
         className="codesandbox"
-        src="https://codesandbox.io/s/musing-noether-nww6ol?file=/src/App.js"
+        src="https://codesandbox.io/p/sandbox/async-brook-r2o6o0?file=%2Fsrc%2FApp.tsx"
         allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
         sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
       ></iframe>
