@@ -15,6 +15,7 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
+  apiParser: {},
   base: process.env.NODE_ENV === 'development' ? '/' : `/${repo}`,
   publicPath: process.env.NODE_ENV === 'development' ? '/' : basePath,
   resolve: {
@@ -23,6 +24,7 @@ export default defineConfig({
       { type: 'component', dir: './packages/lordaeron-react/src/components' },
       { type: 'mobile', dir: './packages/lordaeron-react-mobile/src' },
     ],
+    entryFile: './packages/lordaeron-react/src/index.ts',
     codeBlockMode: 'passive',
   },
   alias: {
@@ -67,7 +69,7 @@ export default defineConfig({
       : `/${repo}/images/favicon.ico`,
   ],
   styles: [style],
-  theme: { '@primary-color': '#1DA57A','@hd': '0.02rem' },
+  theme: { '@primary-color': '#1DA57A', '@hd': '0.02rem' },
   clickToComponent: {},
   targets: { chrome: 79 },
   codeSplitting: { jsStrategy: 'granularChunks' },

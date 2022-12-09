@@ -3,6 +3,7 @@
   - https://beta.reactjs.org/
   - https://www.typescriptlang.org/
   - https://github.com/typescript-cheatsheets/react
+  - [react性能优化](http://wangxince.site/my-demo-markdown/project/react_optimization/react-optimization)
 - JSS
   - https://cssinjs.org/jss-plugin-compose?v=v10.9.2
   - https://github.com/cssinjs/jss/blob/master/docs/react-jss-ts.md
@@ -17,4 +18,30 @@
   - jest
   - ts-jest
 - 动画
+  - [react-spring](https://react-spring.dev/components/trail#trail)
+  - https://cssfx.lovejade.cn/
+  - https://animate.style/
+- 性能优化方案
+  - 无限滚动
+  - ...
+- 文档工具
+  - dumi 2.x
+- 相关插件集成
+  - vscode插件
+  - 脚手架
+  - 模板仓库
+  - docker
+- js相关知识
+  - requestAnimationFrame
+  - resizeobserver
+  - IntersectionObserver
+  - MutationObserver
+  - drop
+  - ...
+- CSS原生知识
+  - ...
+- 优秀的react周边
+  - https://github.com/ReactTraining/react-media
+  - https://github.com/yocontra/react-responsive
+  - ...
 - ...

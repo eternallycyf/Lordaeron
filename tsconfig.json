@@ -38,11 +38,15 @@
     },
   },
   "include": [
+    "**/*",
+    ".dumi/**/*",
     "typings.d.ts", //配置的.d.ts文件
-    "docs"
+    "docs",
   ],
   "exclude": [
     "node_modules",
-    "lib"
+    "docs-dist",
+    "typings",
+    ".dumi/tmp*/**/*"
   ]
 }

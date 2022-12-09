@@ -5,11 +5,35 @@ export type RuleNames = 'btn' | 'btn-lg' | 'btn-sm' | 'btn-primary' | 'btn-dange
 export interface CustomTheme { }
 
 export interface BaseButtonProps {
+  /**
+   * @description 类名
+   * @default ''
+   */
   className?: string;
+  /**
+   * @description 是否禁用
+   * @default "false"
+   */
   disabled?: boolean;
+  /**
+   * @description 大小
+   * @default "lg"
+   */
   size?: 'lg' | 'sm';
+  /**
+   * @description 类型
+   * @default "default"
+   */
   type?: 'primary' | 'default' | 'danger' | 'link';
+  /**
+   * @description children
+   * @default 'null''
+   */
   children?: React.ReactNode,
+  /**
+   * @description href
+   * @default '#'
+   */
   href?: string
 }
 
