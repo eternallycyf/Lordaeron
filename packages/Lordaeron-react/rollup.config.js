@@ -37,7 +37,7 @@ export default {
     commonjs({
       ignoreGlobal: true,
       include: /\/node_modules\//,
-      external: ['react', 'react-dom', 'styled-components'],
+      external: ['react', 'react-dom', 'react-jss'],
       namedExports: {
         react: Object.keys(require('react')),
         'react-is': Object.keys(require('react-is')),

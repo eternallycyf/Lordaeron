@@ -16,7 +16,7 @@ function getAllBiz(source: string): IBusinessList {
   const bizList: IBusinessList = [];
   folders.forEach((item) => {
     if (whiteList.includes(item)) return;
-    const itemPath = path.resolve(__dirname, `../packages/lordaeron-react/src/components/${item}/`);
+    const itemPath = path.resolve(__dirname, `../../packages/lordaeron-react/src/components/${item}/`);
     bizList.push({
       name: item,
       path: itemPath,
@@ -24,8 +24,8 @@ function getAllBiz(source: string): IBusinessList {
   });
   return bizList;
 }
-const targetFile: string = path.resolve(__dirname, "../packages/lordaeron-react/src/index.ts");
-const bizPath: string = path.resolve(__dirname, "../packages/lordaeron-react/src/components");
+const targetFile: string = path.resolve(__dirname, "../../packages/lordaeron-react/src/index.ts");
+const bizPath: string = path.resolve(__dirname, "../../packages/lordaeron-react/src/components");
 const templatePath: string = path.resolve(
   __dirname,
   "./auto-import.ts.ejs",

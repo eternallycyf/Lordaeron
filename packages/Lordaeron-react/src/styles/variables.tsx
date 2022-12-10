@@ -85,9 +85,9 @@ export const $h5_font_size = (font_size_base_rem * 1.25);
 export const $h6_font_size = (font_size_base_rem * 1);
 
 // 链接
-export const $link_color = $primary;
+export const $link_color = $theme_colors.primary;
 export const $link_decoration = 'none';
-export const $link_hover_color = Color($link_color).darken(0.15);
+export const $link_hover_color = Color($link_color).darken(0.15).hex() as ColorParam;
 export const $link_hover_decoration = 'none';
 
 // body

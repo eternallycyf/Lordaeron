@@ -3,16 +3,13 @@
   "name": "lordaeron",
   "version": "1.0.0",
   "scripts": {
-    "auto-import-init": "ts-node scripts/auto-import.ts",
+    "auto-import-init": "ts-node scripts/auto-import/auto-import.ts",
     "upgrade:component": "ts-node scripts/publish/replace-version-in-pc.ts && cd ./packages/lordaeron-react  && yarn publish --access=public",
     "start": "npm run auto-import-init && dumi dev",
     "build": "dumi build",
     "docs:build": "npm run auto-import-init && dumi build",
     "docs:deploy": "npm run auto-import-init && gh-pages -d docs-dist",
-    "test:pkg": "jest ./tests -u",
     "deploy": "npm run docs:build && npm run docs:deploy",
-    "eslint": "eslint docs/ packages/lordaeron-react/src --cache --fix --quiet --ext .js,.jsx,.ts,.tsx",
-    "stylelint": "stylelint {packages,docs}/**/*.less --fix",
     "prettier": "prettier --config .prettierrc.js --write \"{packages,docs}/**/*.{js,jsx,ts,tsx}\""
   },
   "main": "dist/index.js",
@@ -39,12 +36,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.13.5",
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@types/node": "^18.11.10",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "babel-plugin-import": "^1.13.5",
     "chalk": "^2.4.1",
     "commander": "^9.4.0",
     "cross-env": "^7.0.3",

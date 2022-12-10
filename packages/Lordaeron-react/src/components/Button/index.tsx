@@ -14,7 +14,7 @@ const Button: FC<ButtonProps> = (props) => {
     ...restProps
   } = props
   const styles = useStyles({ ...props })
-  const classes = `${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
+  const classes = `lordaeron-button ${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
 
   if (type === 'link') {
     return (

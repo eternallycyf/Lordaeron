@@ -4,6 +4,5 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas) 
 
-export { default as Button } from './components/Button'; 
-export { default as Icon } from './components/Icon'; 
-
+<% plugins.forEach(function(plugin) { %>export { default as <%= plugin.name %> } from './components/<%= plugin.name %>'; 
+<% }); %>

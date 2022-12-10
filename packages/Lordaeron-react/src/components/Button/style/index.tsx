@@ -1,7 +1,6 @@
-import { createUseStyles } from 'react-jss'
+import { createUseStyles } from 'react-jss';
 import * as variables from '../../../styles/variables';
 import * as mixins from './mixin';
-import Color from 'color';
 import { ButtonProps, CustomTheme, RuleNames } from "../interface";
 
 const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>({

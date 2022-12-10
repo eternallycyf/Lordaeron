@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test web-react pkg test pc dist cjs module correctly 1`] = `
+Array [
+  "Button",
+]
+`;
+
+exports[`test web-react pkg test pc dist esm module correctly 1`] = `
+Array [
+  "Button",
+]
+`;
+
+exports[`test web-react pkg test pc dist umd module correctly 1`] = `
+Array [
+  "Button",
+]
+`;
