@@ -40,11 +40,11 @@ const GlobalConfig = (props: GlobalConfigProps) => {
 
   return (
     <globalCtx.Provider value={props}>
-      <PrefixClsProvider classNamePrefix={prefixCls ?? 'lord'} id={{ minify: true }}>
-        <ThemeProvider theme={currentTheme}>
+      <ThemeProvider theme={currentTheme}>
+        <PrefixClsProvider classNamePrefix={prefixCls ?? 'lord'}>
           {children}
-        </ThemeProvider>
-      </PrefixClsProvider>
+        </PrefixClsProvider>
+      </ThemeProvider>
     </globalCtx.Provider>
   )
 };

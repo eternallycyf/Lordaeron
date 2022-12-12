@@ -4,7 +4,7 @@ const Base = () => {
   return (
     <ConfigProvider
       prefixCls='xxx-'
-      customTheme={{ 'lordaeron-button': { background: 'red' } }}
+      customTheme={{ '& $btn': { background: 'red' } }}
     >
       <Button type="primary" >
         primary button

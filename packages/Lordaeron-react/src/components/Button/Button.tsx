@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = (props) => {
   } = props
   const theme = useTheme()
   const styles = useStyles({ ...props, ...theme })
-  const classes = `${styles['lordaeron-button']} ${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
+  const classes = `${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
 
   const Link = (
     <a onClick={(e) => e.preventDefault()} className={classes} href={href} {...restProps}>
@@ -35,9 +35,9 @@ const Button: FC<ButtonProps> = (props) => {
   )
 
   return (
-    <>
+    <div className={styles["lordaeron-button"]}>
       {type == 'link' ? Link : Button}
-    </>
+    </div>
   )
 }
 export default Button

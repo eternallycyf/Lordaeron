@@ -1,12 +1,13 @@
 import { createUseStyles } from 'react-jss';
+import _ from 'lodash'
 import * as variables from '../../../styles/variables';
 import * as mixins from './mixin';
 import { ButtonProps, CustomTheme, RuleNames } from "../interface";
 
 const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>((theme) => {
-  return {
+  const styles = {
     'lordaeron-button': {
-
+      ...theme
     },
     btn: {
       position: 'relative',
@@ -68,9 +69,9 @@ const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>((theme) =
     disabled: {
       color: variables.$btn_disabled_color,
       cursor: 'not-allowed',
-    },
-    ...theme
+    }
   }
+  return styles
 })
 
 export default useStyles;
