@@ -1,5 +1,8 @@
 import Color from 'color';
-import * as variables from '../../../styles/variables';
+import getVariables from "../../../styles/variables";
+import { DEFAULT_THEME } from "../../../theme";
+let variables = { ...getVariables({ ...DEFAULT_THEME }) };
+
 export const buttonSize = ($padding_y, $padding_x, $font_size, $border_radius) => {
   return {
     padding: $padding_y + ' ' + $padding_x,

@@ -73,7 +73,7 @@ export default defineConfig({
   clickToComponent: {},
   targets: { chrome: 79 },
   codeSplitting: { jsStrategy: 'granularChunks' },
-  devtool: process.env.NODE_ENV === 'development' ? 'eval' : false,
+  devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false,
   ignoreMomentLocale: true,
   outputPath: 'docs-dist',
   extraBabelPlugins: [

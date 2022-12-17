@@ -1,13 +1,18 @@
 import { createUseStyles } from 'react-jss';
-import _ from 'lodash'
-import * as variables from '../../../styles/variables';
 import * as mixins from './mixin';
 import { ButtonProps, CustomTheme, RuleNames } from "../interface";
+import getVariables from '../../../styles/variables'
+import { DEFAULT_THEME } from "../../../theme";
+let variables = { ...getVariables({ ...DEFAULT_THEME }) };
 
 const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>((theme) => {
+  if (theme) {
+    variables = { ...variables, ...theme.variables }
+  }
   const styles = {
     'lordaeron-button': {
-      ...theme
+      display: 'inline-block',
+      ...theme.currentTheme
     },
     btn: {
       position: 'relative',
@@ -33,10 +38,10 @@ const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>((theme) =
         },
       },
     },
-    'btn-lg': {
+    'btn-large': {
       ...mixins.buttonSize(variables.$btn_padding_y_lg, variables.$btn_padding_x_lg, variables.$btn_font_size_lg, variables.$btn_border_radius_lg),
     },
-    'btn-sm': {
+    'btn-small': {
       ...mixins.buttonSize(variables.$btn_padding_y_sm, variables.$btn_padding_x_sm, variables.$btn_font_size_sm, variables.$btn_border_radius_sm),
     },
     'btn-primary': {

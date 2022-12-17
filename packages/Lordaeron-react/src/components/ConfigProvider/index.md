@@ -13,7 +13,8 @@ demo:
 
 ## Example
 
-<code src='./demo/base.tsx' description='custom'>ConfigProvider</code>
+<code src='./demo/base.tsx' description='custom' iframe='true'>Dark</code>
+<code src='./demo/dark.tsx' description='custom' iframe='true'>Dark</code>
 
 ## API
 <API id='ConfigProvider'></API>

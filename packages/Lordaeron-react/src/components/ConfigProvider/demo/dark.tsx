@@ -5,20 +5,13 @@ const Base = () => {
     <>
       <ConfigProvider
         prefixCls='xxx-'
-        customTheme={{ '& $btn': { background: 'lavender', color: 'black' } }}
+        dark
+        defaultThemeConfig={{ size: 'small' }}
       >
         <Button type="primary" >
           primary button
         </Button>
         <Button type="default" >
-          primary button
-        </Button>
-      </ConfigProvider>
-      <ConfigProvider
-        prefixCls='custim-'
-        customTheme={{ '& $btn': { background: '#00b96b', color: '#fff' } }}
-      >
-        <Button type="link" >
           primary button
         </Button>
       </ConfigProvider>

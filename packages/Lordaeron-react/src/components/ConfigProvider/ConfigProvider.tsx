@@ -6,6 +6,9 @@ import SizeContext, { SizeContextProvider } from "./SizeContext";
 import DARK_THEME from '../../theme/themes/dark';
 import { DEFAULT_THEME } from '../../theme';
 import { DisabledContextProvider } from "./DisabledContext";
+import getVariables from "../../styles/variables";
+let variables = { ...getVariables({ ...DEFAULT_THEME }) };
+
 export const globalCtx = createContext<GlobalConfigProps>({} as GlobalConfigProps);
 
 const GlobalConfig = (props: GlobalConfigProps) => {
@@ -26,16 +29,17 @@ const GlobalConfig = (props: GlobalConfigProps) => {
     childNode = <ConfigContext.Provider value={{ renderEmpty: defaultThemeConfig.renderEmpty }}>{childNode}</ConfigContext.Provider>;
   }
 
-  if (Object.keys(currentTheme).length == 0) {
-    currentTheme = { ...DEFAULT_THEME }
-  }
-
-  if (Object.keys(currentTheme).length > 0) {
-    currentTheme = { ...customTheme }
+  if (customTheme) {
+    currentTheme = {
+      customTheme, variables: { ...variables }
+    }
   }
 
   if (dark) {
-    currentTheme = { ...DARK_THEME }
+    currentTheme = {
+      currentTheme,
+      variables: { ...variables, ...getVariables(DARK_THEME) }
+    }
   }
 
   return (
@@ -49,7 +53,8 @@ const GlobalConfig = (props: GlobalConfigProps) => {
   )
 };
 
+
 GlobalConfig.ConfigContext = ConfigContext;
 GlobalConfig.SizeContext = SizeContext;
 
-export default GlobalConfig
+export default GlobalConfig;

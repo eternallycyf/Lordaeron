@@ -3,19 +3,22 @@ import React, { FC } from "react";
 import { ButtonProps } from "./interface";
 import useStyles from "./style";
 import { useTheme } from 'react-jss'
+import { globalCtx } from "../ConfigProvider/ConfigProvider";
+import { getDefaultProps } from "./utils";
 
 const Button: FC<ButtonProps> = (props) => {
-  const {
+  const globalValue = React.useContext(globalCtx);
+  let {
     className = '',
     disabled = false,
-    size = 'lg',
+    size = 'middle',
     type = 'primary',
     children = null,
     href = "#",
     ...restProps
-  } = props
+  } = getDefaultProps(props, globalValue.defaultThemeConfig)
   const theme = useTheme()
-  const styles = useStyles({ ...props, ...theme })
+  const styles = useStyles({ ...props, ...theme, ...globalValue })
   const classes = `${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
 
   const Link = (

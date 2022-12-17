@@ -13,7 +13,7 @@ demo:
 
 ## Example
 
-<code src='./demo/base.tsx' description=' '>Empty</code>
+<code src='./demo/base.tsx' iframe='true' description=' '>Empty</code>
 
 ## API
 <API id='Empty'></API>
