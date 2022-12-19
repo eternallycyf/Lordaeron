@@ -5,7 +5,11 @@ const Base = () => {
     <>
       <ConfigProvider
         prefixCls='xxx-'
-        customTheme={{ '& $btn': { background: 'lavender', color: 'black' } }}
+        customTheme={{
+          Button: {
+            '& $btn': { background: 'lavender', color: 'black' }
+          }
+        }}
       >
         <Button type="primary" >
           primary button

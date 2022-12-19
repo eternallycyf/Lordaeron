@@ -1,4 +1,5 @@
 import { red, volcano, gold, yellow, lime, green, cyan, blue, geekblue, purple, magenta, grey } from '@ant-design/colors';
+
 const DEFAULT_THEME = {
   $red: red.primary,
   $volcano: volcano.primary,
@@ -12,6 +13,6 @@ const DEFAULT_THEME = {
   $purple: purple.primary,
   $magenta: magenta.primary,
   $grey: grey.primary,
-};
+} as const;
 
 export default DEFAULT_THEME

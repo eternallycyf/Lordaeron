@@ -1,18 +1,18 @@
 import { createUseStyles } from 'react-jss';
 import * as mixins from './mixin';
-import { ButtonProps, CustomTheme, RuleNames } from "../interface";
-import getVariables from '../../../styles/variables'
-import { DEFAULT_THEME } from "../../../theme";
-let variables = { ...getVariables({ ...DEFAULT_THEME }) };
+import { RuleNames } from "../interface";
+import getVariables from '../../../styles/variables';
 
-const useStyles = createUseStyles<RuleNames, ButtonProps, CustomTheme>((theme) => {
-  if (theme) {
-    variables = { ...variables, ...theme.variables }
+const useStyles = createUseStyles<RuleNames>((theme) => {
+  let variables = { ...getVariables({}) }
+  if (theme.themeType) {
+    variables = { ...variables, ...theme.themeVariables }
   }
+  const customTheme = theme?.customTheme && theme?.customTheme?.Button ? theme?.customTheme?.Button : {};
   const styles = {
     'lordaeron-button': {
       display: 'inline-block',
-      ...theme.currentTheme
+      ...customTheme
     },
     btn: {
       position: 'relative',

@@ -2,11 +2,6 @@ import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 
 export type RuleNames = 'lordaeron-button' | 'btn' | 'btn-large' | 'btn-small' | 'btn-primary' | 'btn-danger' | 'btn-default' | 'btn-link' | 'disabled';
 
-export interface CustomTheme {
-  variables: any;
-  currentTheme: any;
-}
-
 export interface BaseButtonProps {
   /**
    * @description 类名

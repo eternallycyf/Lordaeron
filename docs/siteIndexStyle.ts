@@ -116,6 +116,35 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
 .features{
   padding: 0;
 }
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(
+    to top,
+    #fbc2eb 0%, 
+    #a6c1ee 100%
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
 `;
 
 export default style;

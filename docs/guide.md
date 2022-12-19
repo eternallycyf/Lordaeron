@@ -17,6 +17,13 @@
 - 单元测试
   - jest
   - ts-jest
+- 打包工具
+  - rollup
+- 部署
+  - docker
+  - jenkins
+  - nginx
+  - 阿里云
 - 动画
   - [react-spring](https://react-spring.dev/components/trail#trail)
   - https://cssfx.lovejade.cn/

@@ -18,7 +18,7 @@ const Button: FC<ButtonProps> = (props) => {
     ...restProps
   } = getDefaultProps(props, globalValue.defaultThemeConfig)
   const theme = useTheme()
-  const styles = useStyles({ ...props, ...theme, ...globalValue })
+  const styles = useStyles({ ...props, theme, ...globalValue } as any)
   const classes = `${className} ${styles.btn} ${styles['btn-' + type]} ${styles['btn-' + size]} ${disabled && styles.disabled}`
 
   const Link = (

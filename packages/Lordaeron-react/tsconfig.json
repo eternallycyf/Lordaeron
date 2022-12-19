@@ -16,6 +16,7 @@
   },
   "include": [
     "typings.d.ts",
+    "global.d.ts",
     "src",
     "src/types/*.d.ts",
   ]

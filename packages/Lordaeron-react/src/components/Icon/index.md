@@ -1,5 +1,5 @@
 ---
-title: Empty
+title: Icon
 order: 0
 toc: content
 group:
@@ -9,13 +9,13 @@ demo:
   cols: 2
 ---
 
-# Empty
+# Icon
 
 ## Example
 
-<code src='./demo/base.tsx' iframe='true' description=' '>Empty</code>
+<code src='./demo/base.tsx'  description=' '>Icon</code>
 
 ## API
-<API id='Empty'></API>
+<API id='Icon'></API>
 
 ## FAQ

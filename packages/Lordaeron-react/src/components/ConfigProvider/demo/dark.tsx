@@ -1,6 +1,6 @@
 import { Button, ConfigProvider } from "lordaeron";
 import React from "react";
-const Base = () => {
+const Dark = () => {
   return (
     <>
       <ConfigProvider
@@ -19,5 +19,5 @@ const Base = () => {
   )
 }
 
-export default Base;
+export default Dark;
 

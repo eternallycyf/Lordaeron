@@ -3,11 +3,10 @@ import { GlobalConfigProps } from './interface';
 import { JssProvider as PrefixClsProvider, ThemeProvider } from 'react-jss'
 import { ConfigContext } from "./context";
 import SizeContext, { SizeContextProvider } from "./SizeContext";
-import DARK_THEME from '../../theme/themes/dark';
-import { DEFAULT_THEME } from '../../theme';
 import { DisabledContextProvider } from "./DisabledContext";
 import getVariables from "../../styles/variables";
-let variables = { ...getVariables({ ...DEFAULT_THEME }) };
+import { DefaultTheme } from 'react-jss'
+import { DARK_THEME, DEFAULT_THEME } from "../../theme";
 
 export const globalCtx = createContext<GlobalConfigProps>({} as GlobalConfigProps);
 
@@ -15,7 +14,7 @@ const GlobalConfig = (props: GlobalConfigProps) => {
   const { children, prefixCls, defaultThemeConfig, customTheme, dark } = props;
 
   let childNode = children;
-  let currentTheme: any = {};
+  let currentTheme = {} as DefaultTheme;
 
   if (defaultThemeConfig?.size) {
     childNode = <SizeContextProvider size={defaultThemeConfig.size}>{childNode}</SizeContextProvider>;
@@ -31,14 +30,17 @@ const GlobalConfig = (props: GlobalConfigProps) => {
 
   if (customTheme) {
     currentTheme = {
-      customTheme, variables: { ...variables }
+      customTheme,
+      themeType: 'light',
+      themeVariables: getVariables(DEFAULT_THEME)
     }
   }
 
   if (dark) {
     currentTheme = {
-      currentTheme,
-      variables: { ...variables, ...getVariables(DARK_THEME) }
+      customTheme,
+      themeType: 'dark',
+      themeVariables: getVariables(DARK_THEME)
     }
   }
 

@@ -1,8 +1,9 @@
 import Color from 'color';
+import { ColorParam } from "../types/global";
 import { DEFAULT_THEME } from "../theme";
-import { ColorParam } from '../types/global';
+import { IGetVariables, IVariables } from './components'
 
-const getVariables = ({
+const getVariables: IGetVariables = ({
   $blue = DEFAULT_THEME.$blue,
   $green = DEFAULT_THEME.$green,
   $cyan = DEFAULT_THEME.$cyan,
@@ -10,7 +11,7 @@ const getVariables = ({
   $red = DEFAULT_THEME.$red
 }) => {
 
-  let variables: any = {};
+  let variables = {} as IVariables;
 
   variables.$white = '#FFFFFF' as ColorParam;
   variables.$black = '#000';
@@ -36,15 +37,15 @@ const getVariables = ({
   variables.$error = $red;
 
   variables.$theme_colors = {
-    "primary": variables.$primary,
-    "secondary": variables.$secondary,
-    "success": variables.$success,
-    "info": variables.$info,
-    "warning": variables.$warning,
-    "danger": variables.$danger,
-    "light": variables.$light,
-    "dark": variables.$dark,
-    "error": variables.$error,
+    "$primary": variables.$primary,
+    "$secondary": variables.$secondary,
+    "$success": variables.$success,
+    "$info": variables.$info,
+    "$warning": variables.$warning,
+    "$danger": variables.$danger,
+    "$light": variables.$light,
+    "$dark": variables.$dark,
+    "$error": variables.$error,
   }
 
   variables.px = 'px';
@@ -85,7 +86,7 @@ const getVariables = ({
   variables.$h6_font_size = (variables.font_size_base_rem * 1);
 
   // 链接
-  variables.$link_color = variables.$theme_colors.primary;
+  variables.$link_color = variables.$theme_colors.$primary;
   variables.$link_decoration = 'none';
   variables.$link_hover_color = Color(variables.$link_color).darken(0.15).hex() as ColorParam;
   variables.$link_hover_decoration = 'none';
@@ -93,7 +94,7 @@ const getVariables = ({
   // body
   variables.$body_bg = variables.$white;
   variables.$body_color = variables.$gray900;
-  variables.$body_text_align = 'null';
+  variables.$body_text_align = 'unset';
 
   // Spacing
   variables.$spacer_rem = 1;
@@ -143,7 +144,7 @@ const getVariables = ({
   variables.$btn_border_radius_sm = variables.$border_radius_sm;
 
   variables.$btn_transition = 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out';
-  return variables
+  return variables;
 }
 
 export default getVariables

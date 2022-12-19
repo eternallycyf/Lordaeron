@@ -1,3 +1,4 @@
+import { JssStyle } from "jss";
 import { ReactNode } from 'react';
 import { RenderEmptyHandler } from "./DefaultRenderEmpty";
 import { SizeType } from "./SizeContext";
@@ -24,9 +25,7 @@ export interface GlobalConfigProps {
   prefixCls?: string;
   defaultThemeConfig?: IDefaultThemeConfig;
   customTheme?: {
-    // TODO
-    'button': {
-      color: 'blue';
-    }
+    // todo
+    'Button': JssStyle
   }
 }
