@@ -121,6 +121,35 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
 .features{
   padding: 0;
 }
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(
+    to top,
+    #fbc2eb 0%, 
+    #a6c1ee 100%
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
 </style>
 <link rel="stylesheet" href="/lordaeron/umi.ee8357ce.css">
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
@@ -128,7 +157,7 @@ html[data-perfers-color="dark"] .__dumi-default-previewer .__dumi-default-previe
 </head>
 <body>
 <div id="root"></div>
-<script src="/lordaeron/umi.06a0397d.js"></script>
+<script src="/lordaeron/umi.89e7cdb5.js"></script>
 <script charset="utf-8">(function(){
   let divs = document.createElement('div');
   divs.className = 'snow-container';

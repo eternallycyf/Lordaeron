@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklordaeron=self.webpackChunklordaeron||[]).push([[12],{37351:function(u,a,n){n.r(a);var o=n(24738),t=n(67294),r=n(85893),s=function(){return(0,r.jsx)(o.Icon,{icon:"fa-thin fa-house"})};a.default=s}}]);
