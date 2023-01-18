@@ -86,6 +86,14 @@ export default defineConfig({
       },
     ],
   ],
+  metas: [
+    {
+      'http-equiv': 'Content-Security-Policy',
+      content: 'upgrade-insecure-requests',
+    },
+    { 'http-equiv': 'Cache-control', content: 'no-cache' },
+    { 'http-equiv': 'Cache', content: 'no-cache' },
+  ],
   exportStatic: {},
   hash: true,
   headScripts: [{ src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js' }],
