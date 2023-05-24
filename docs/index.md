@@ -12,7 +12,6 @@ hero:
 
 <code src="./components/home-page.tsx" inline="true"></code>
 
-<code src="./components/Loading.tsx" inline="true"></code>
 
 ```tsx | demo
 /**
@@ -25,7 +24,7 @@ export default () => (
   <Section
     title="Experience the ultimate in lordaeron online"
     style={{ marginTop: 40 }}
-    titleStyle={{ paddingBottom: 100, fontWeight: 'bold', fontSize: 50, textAlign: 'center' }}
+    titleStyle={{ paddingBottom: 100, fontWeight: 'bold', fontSize: 50, textAlign: 'center',color:'black' }}
   >
       <iframe
         className="codesandbox"
@@ -50,7 +49,7 @@ export default () => (
   <Section
     title="Thanks to all contributors~"
     style={{ marginTop: 140 }}
-    titleStyle={{ paddingBottom: 20, fontWeight: 'bold', fontSize: 50, textAlign: 'center' }}
+    titleStyle={{ paddingBottom: 20, fontWeight: 'bold', fontSize: 50, textAlign: 'center',color: 'black' }}
   >
     <Contributor/>
   </Section>

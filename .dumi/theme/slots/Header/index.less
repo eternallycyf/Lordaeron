@@ -5,14 +5,16 @@
   z-index: 10;
 
   &:not([data-static]) {
-    top: 0;
     position: sticky;
+    top: 0;
     background-color: fadeout(@c-site-bg, 10%);
+
     backdrop-filter: blur(6px);
 
     // to avoid backdrop filter conflict with navbar overlay
     &[data-mobile-active] {
       background-color: @c-site-bg;
+
       backdrop-filter: none;
     }
   }
@@ -20,11 +22,11 @@
   &-content {
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 0 24px;
     max-width: @s-content-width;
     height: @s-header-height;
-    box-sizing: border-box;
 
     @media @mobile {
       height: @s-header-height-m;
@@ -36,8 +38,8 @@
   }
 
   &-right {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: space-between;
 
     &-aside {
@@ -45,9 +47,9 @@
       align-items: center;
 
       @media @mobile {
+        justify-content: center;
         margin: 8px 16px;
         padding-top: 24px;
-        justify-content: center;
         border-top: 1px solid @c-border-light;
       }
     }
@@ -55,20 +57,21 @@
     @media @mobile {
       position: fixed;
       top: @s-header-height-m;
-      left: 0;
       right: 0;
-      height: calc(100vh - @s-header-height-m);
+      left: 0;
       display: block;
-      background-color: fadeout(@c-site-bg, 40%);
-      border-top: 1px solid @c-border-light;
-      backdrop-filter: blur(30px);
       box-sizing: border-box;
+      height: calc(100vh - @s-header-height-m);
+      border-top: 1px solid @c-border-light;
+      background-color: fadeout(@c-site-bg, 40%);
       transition: all 0.2s;
 
+      backdrop-filter: blur(30px);
+
       .@{prefix}-header:not([data-mobile-active]) & {
-        opacity: 0;
         visibility: hidden;
         padding-top: 20px;
+        opacity: 0;
       }
     }
   }
@@ -76,20 +79,135 @@
   &-menu-btn {
     position: absolute;
     top: 50%;
-    inset-inline-end: 24px;
+    display: none;
     padding: 0;
     border: 0;
     background: transparent;
     transform: translateY(-50%);
-    display: none;
+
+    inset-inline-end: 24px;
 
     @media @mobile {
       display: block;
     }
 
-    > svg {
+    >svg {
       width: 20px;
+
       fill: @c-text-secondary;
     }
   }
+}
+
+.ld-doc-header {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%), 0 1px 6px -1px rgb(0 0 0 / 2%), 0 2px 4px 0 rgb(0 0 0 / 2%);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 20px;
+
+  @{dark-selector} & {
+    background-color: #050709e6;
+  }
+
+  &-nav-item {
+    color: #333;
+    cursor: pointer;
+  }
+
+  &-nva-item:hover {
+    color: #1677ff;
+  }
+
+  .ant-menu {
+    border: none;
+    line-height: unset;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    font-size: 15px;
+
+    @{dark-selector} & {
+      color: #c6c9cd;
+    }
+
+    .ant-menu-item::after,
+    .ant-menu-submenu::after {
+      bottom: -23px;
+    }
+  }
+
+  .dumi-default-search-bar-input {
+    border: none;
+    width: 220px;
+  }
+
+  .dumi-default-search-shortcut {
+    margin-left: 10px;
+  }
+}
+
+.dumi-default-doc-layout>main {
+  max-width: 100% !important;
+
+  @{dark-selector} & {
+    background-color: #050709e6;
+  }
+
+  @{dark-selector} & {
+    color: #c6c9cd;
+  }
+}
+
+.dumi-default-sidebar {
+  width: 200px;
+}
+
+.dumi-default-content {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.dumi-default-hero {
+  padding-top: 140px !important;
+  height: 600px !important;
+  position: relative;
+  z-index: 999;
+}
+
+
+.dumi-default-hero>p {
+  margin: 0 !important;
+}
+
+.dumi-default-hero-actions {
+  margin-top: 32px !important;
+
+}
+
+.dumi-default-features {
+  max-width: 960px !important;
+}
+
+.dumi-default-features-item {
+  text-align: center;
+}
+
+.dumi-default-sidebar~.dumi-default-content {
+  padding: 48px 48px 0 !important;
+}
+
+.dumi-default-content {
+  padding: 0 !important;
+
+  @{dark-selector} & {
+    background-color: #050709e6;
+  }
+}
+
+.ld-doc-header~main {
+  padding: 0 20px !important;
 }

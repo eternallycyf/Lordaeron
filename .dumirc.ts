@@ -27,25 +27,37 @@ export default defineConfig({
     entryFile: './packages/lordaeron-react/src/index.ts',
     codeBlockMode: 'passive',
   },
+  html2sketch: {},
   alias: {
     packages: path.join(__dirname, 'packages'),
     lordaeron: path.join(__dirname, 'packages/lordaeron-react/src'),
     'lordaeron-react-mobile': path.join(__dirname, 'packages/lordaeron-react-mobile/src'),
   },
   locales: [
-    { id: 'en-US', name: 'English', suffix: '' },
-    { id: 'zh-CN', name: '中文', suffix: 'zh-CN' },
+    // { id: 'en-US', name: 'English', suffix: '' },
+    { id: 'zh-CN', name: '中文' },
   ],
   themeConfig: {
     name: 'lordaeron',
     carrier: 'dumi',
-    hd: true,
+    hd: {
+      rules: [
+        { maxWidth: 375, mode: 'vw', options: [100, 750] },
+        { minWidth: 376, maxWidth: 750, mode: 'vw', options: [100, 1500] },
+      ],
+    },
+    showLineNum: true,
+    prefersColor: { switch: true },
     logo:
       process.env.NODE_ENV === 'development'
         ? '/images/origin.png'
         : `/${repo}/images/origin.png`,
     footer: 'lordaeron © 2020 Created by lordaeron',
-    nav: [
+    socialLinks: {
+      github: 'https://github.com/eternallycyf/lordaeron',
+    },
+    nav: {
+      'zh-CN': [
       {
         title: '指南',
         link: '/guide',
@@ -54,11 +66,12 @@ export default defineConfig({
         title: '组件',
         link: '/components/button',
       },
-      {
-        title: 'GitHub',
-        link: 'https://github.com/eternallycyf/lordaeron',
-      },
-    ],
+      ],
+      // 'en-US': [
+      //   {
+      //   }
+      // ]
+    },
   },
   mfsu: {
     runtimePublicPath: true,
@@ -84,16 +97,17 @@ export default defineConfig({
         libraryDirectory: 'es',
         style: true,
       },
+      'antd'
     ],
   ],
-  metas: [
-    {
-      'http-equiv': 'Content-Security-Policy',
-      content: 'upgrade-insecure-requests',
-    },
-    { 'http-equiv': 'Cache-control', content: 'no-cache' },
-    { 'http-equiv': 'Cache', content: 'no-cache' },
-  ],
+  // metas: [
+  //   {
+  //     'http-equiv': 'Content-Security-Policy',
+  //     content: 'upgrade-insecure-requests',
+  //   },
+  //   { 'http-equiv': 'Cache-control', content: 'no-cache' },
+  //   { 'http-equiv': 'Cache', content: 'no-cache' },
+  // ],
   exportStatic: {},
   hash: true,
   headScripts: [{ src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js' }],
